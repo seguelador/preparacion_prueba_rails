@@ -42,6 +42,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # RailRoady generates Rails 3/4/5 model and controller UML diagrams as cross-platform .svg files
+  gem 'railroady'
 end
 
 group :development do

@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   enum role: {guest: 0, basic: 1, admin: 2}
+
+  has_many :pokemons, through: :catches
+  has_many :catches
 end
