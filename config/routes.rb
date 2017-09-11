@@ -1,4 +1,6 @@
-Rails.application.routes.draw do
+	Rails.application.routes.draw do
+
+  get 'catches/index'
 
 	root 'pokemons#index'
   
@@ -8,5 +10,15 @@ Rails.application.routes.draw do
   }
   
   resources :pokemons
+  resources :catches do
+  	member do
+  		patch 'level_up'
+  	end
+
+  	collection do
+  		post 'add_pokemon'
+  	end
+  end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

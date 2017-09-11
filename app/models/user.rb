@@ -6,6 +6,6 @@ class User < ApplicationRecord
 
   enum role: {guest: 0, basic: 1, admin: 2}
 
-  has_many :pokemons, through: :catches
   has_many :catches
+  has_many :pokemons, through: :catches
 end
