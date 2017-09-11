@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170911015523) do
+ActiveRecord::Schema.define(version: 20170911041545) do
 
   create_table "catches", force: :cascade do |t|
     t.integer "user_id"
     t.integer "pokemon_id"
-    t.integer "level"
+    t.integer "level", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["pokemon_id"], name: "index_catches_on_pokemon_id"
